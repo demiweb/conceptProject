@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'SimplerPro';
+  src: url('../fonts/simpler/SimplerPro-Regular.otf');
+  src: local('SimplerPro'),
+  url('../fonts/simpler/SimplerPro-Regular.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/simpler/SimplerPro-Regular.woff2') format('woff2'),
+  url('../fonts/simpler/SimplerPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SimplerPro';
+  src: url('../fonts/simpler/SimplerPro-Light.otf');
+  src: local('SimplerPro Light'), local('SimplerPro-Light'),
+  url('../fonts/simpler/SimplerPro-Light.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/simpler/SimplerPro-Light.woff2') format('woff2'),
+  url('../fonts/simpler/SimplerPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'SimplerPro';
+  src: url('../fonts/simpler/SimplerPro-Black.otf');
+  src: local('SimplerPro Black'), local('SimplerPro-Black'),
+  url('../fonts/simpler/SimplerPro-Black.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/simpler/SimplerPro-Black.woff2') format('woff2'),
+  url('../fonts/simpler/SimplerPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SimplerPro';
+  src: url('../fonts/simpler/SimplerPro-Bold.otf');
+  src: local('SimplerPro Bold'), local('SimplerPro-Bold'),
+  url('../fonts/simpler/SimplerPro-Bold.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/simpler/SimplerPro-Bold.woff2') format('woff2'),
+  url('../fonts/simpler/SimplerPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
