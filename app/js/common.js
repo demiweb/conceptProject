@@ -114,3 +114,46 @@ function burgerControl() {
 }
 
 burgerControl();
+
+
+//swipers
+
+let clientsSlider = [...document.querySelectorAll('.our-clients__wrap')];
+
+function clientsStartSlider() {
+    if (!clientsSlider.length) {
+
+    } else {
+        clientsSlider.forEach((sld) => {
+            let sldCont = sld.querySelector('.our-clients__slider');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 600,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 6,
+                breakpoints: {
+
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 40,
+                    }
+                }
+
+            });
+        })
+    }
+}
+
+clientsStartSlider();
+
+//swipers

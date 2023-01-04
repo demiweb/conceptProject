@@ -1,10 +1,1 @@
-<svg id="Group_51" data-name="Group 51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="52" viewBox="0 0 98 52">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_109" data-name="Rectangle 109" width="98" height="52" transform="translate(0 0)" fill="#fff"/>
-    </clipPath>
-  </defs>
-  <g id="Group_50" data-name="Group 50" transform="translate(0 0)" clip-path="url(#clip-path)">
-    <path id="Path_23" data-name="Path 23" d="M98.443,3.272A3.271,3.271,0,0,0,95.172,0H68.18a3.272,3.272,0,1,0,0,6.544H87.205L60.065,33.371,35.315,15.737a3.27,3.27,0,0,0-4.237.377L1.224,46.787A3.271,3.271,0,0,0,5.9,51.35L33.81,22.689l24.7,17.6a3.272,3.272,0,0,0,4.2-.344L91.9,11.107V30.264a3.272,3.272,0,0,0,6.544,0Z" transform="translate(-0.291 0)" fill="#fff"/>
-  </g>
-</svg>
+<svg id="Group_51" data-name="Group 51" xmlns="http://www.w3.org/2000/svg" width="98" height="52"><defs><clipPath id="clip-path"><path id="Rectangle_109" data-name="Rectangle 109" fill="#fff" d="M0 0h98v52H0z"/></clipPath></defs><g id="Group_50" data-name="Group 50" clip-path="url(#clip-path)"><path id="Path_23" data-name="Path 23" d="M98.443 3.272A3.271 3.271 0 0095.172 0H68.18a3.272 3.272 0 100 6.544h19.025l-27.14 26.827-24.75-17.634a3.27 3.27 0 00-4.237.377L1.224 46.787A3.271 3.271 0 005.9 51.35l27.91-28.661 24.7 17.6a3.272 3.272 0 004.2-.344L91.9 11.107v19.157a3.272 3.272 0 006.544 0z" transform="translate(-.291)" fill="#fff"/></g></svg>
