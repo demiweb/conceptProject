@@ -1,24 +1,26 @@
 //mouse hidden bg
 let bgHidden = document.querySelector('.hidden-bg .img');
+
 function ifHiddenBg() {
     if (bgHidden) {
-        function update(e){
+        function update(e) {
             let rect = e.target.getBoundingClientRect();
-            var x = e.clientX - rect.left || e.touches[0].clientX  - rect.left;
-            var y = e.clientY  - rect.top || e.touches[0].clientY  - rect.top;
+            var x = e.clientX - rect.left || e.touches[0].clientX - rect.left;
+            var y = e.clientY - rect.top || e.touches[0].clientY - rect.top;
 
             bgHidden.style.setProperty('--cursorX', x + 'px');
             bgHidden.style.setProperty('--cursorY', y + 'px');
         }
 
-        bgHidden.addEventListener('mousemove',update)
-        bgHidden.addEventListener('touchmove',update);
+        bgHidden.addEventListener('mousemove', update)
+        bgHidden.addEventListener('touchmove', update);
         bgHidden.addEventListener('mouseout', () => {
             bgHidden.style.setProperty('--cursorX', '-50vw');
             bgHidden.style.setProperty('--cursorY', '-50vh');
         })
     }
 }
+
 ifHiddenBg();
 
 
@@ -32,15 +34,71 @@ $(window).scroll(function (e) {
 function headerStart() {
     let headr = document.querySelector('.header');
     let hei = headr.offsetHeight;
-    console.log(hei);
-    if (window.innerWidth < 768) {
-        let hm = document.querySelector('.header-menu');
-        hm.style.height = `calc((100vh - ${hei}px) + 4.1767vw)`;
-    }
+    // console.log(hei);
+
 }
+
 headerStart();
 
 //header scroll
+
+
+//odometer
+let trueLessInterval = [false, false, false];
+
+function isElementInViewport(el, k) {
+
+    // Special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
+
+function counter(id, start, end, duration, k) {
+    let obj = document.getElementById(`${id}`),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.innerHTML = current;
+            if (current == end) {
+                clearInterval(timer);
+                trueLessInterval[k] = true;
+            }
+        }, step);
+}
+
+
+$(window).scroll(function () {
+
+    let elem = document.querySelectorAll('.odometer');
+
+    elem.forEach((el, k) => {
+        if (trueLessInterval[k] === false) {
+            let data = el.dataset.val;
+
+            if (isElementInViewport(el, k)) {
+                trueLessInterval[k] = 3;
+                counter(el.id, 0, data, 1500, k);
+            }
+        }
+    });
+
+
+});
+
+//odometer
 
 //go next click
 
@@ -81,13 +139,6 @@ function allLozadImg() {
 }
 
 allLozadImg();
-
-
-
-
-
-
-
 
 
 //mouse follows
@@ -139,13 +190,16 @@ function clientsStartSlider() {
                     nextEl: sldNext,
                     prevEl: sldPrev,
                 },
-                autoplay: false,
+                autoplay: {
+                    delay: 3000,
+                },
                 spaceBetween: 6,
                 breakpoints: {
 
                     767: {
                         slidesPerView: 5,
                         spaceBetween: 40,
+                        autoplay: false,
                     }
                 }
 
