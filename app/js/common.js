@@ -231,5 +231,22 @@ function infosControl() {
     }
 }
 
+
+
 infosControl();
 //single infos
+
+let btnTxt = [...document.querySelectorAll('.btn-txt')];
+
+function openTxt() {
+    if (btnTxt.length) {
+        btnTxt.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.txt-block').classList.toggle('open');
+            })
+        })
+    }
+}
+openTxt();
