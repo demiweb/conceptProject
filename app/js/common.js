@@ -211,3 +211,25 @@ function clientsStartSlider() {
 clientsStartSlider();
 
 //swipers
+
+
+//single infos
+
+let infos = [...document.querySelectorAll('.our-infos__single')];
+
+function infosControl() {
+    if (infos.length) {
+        infos.forEach((inf, k) => {
+            let btn = inf.querySelector('.btn-infos');
+            btn.addEventListener('click', () => {
+                infos.forEach((inf2) => {
+                    inf2.classList.remove('open');
+                });
+                inf.classList.add('open');
+            })
+        })
+    }
+}
+
+infosControl();
+//single infos
