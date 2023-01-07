@@ -120,6 +120,24 @@ function clickNext() {
 
 clickNext();
 
+let herDown = [...document.querySelectorAll('.her-down')];
+
+function clickHer() {
+    if (herDown.length) {
+        herDown.forEach((btn) => {
+
+
+            btn.addEventListener('click', () => {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $('.our-knowledge').offset().top - $('.header').height()
+                }, 400);
+            })
+        })
+    }
+}
+
+clickHer();
+
 //go next click
 
 let btnMobMoreText = [...document.querySelectorAll('.about-us__cont .text')];
