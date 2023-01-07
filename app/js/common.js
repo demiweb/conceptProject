@@ -102,16 +102,16 @@ $(window).scroll(function () {
 
 //go next click
 
-let btnNext = [...document.querySelectorAll('.go-next-btn')];
+let btnNext = [...document.querySelectorAll('.go-down')];
 
 function clickNext() {
     if (btnNext.length) {
         btnNext.forEach((btn) => {
-            let next = btn.nextElementSibling;
+
 
             btn.addEventListener('click', () => {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $(next).offset().top - $('.header').height()
+                    scrollTop: $('.about-us').offset().top - $('.header').height()
                 }, 400);
             })
         })
@@ -122,6 +122,22 @@ clickNext();
 
 //go next click
 
+let btnMobMoreText = [...document.querySelectorAll('.about-us__cont .text')];
+
+function openMobTextMore() {
+    if (btnMobMoreText.length) {
+        btnMobMoreText.forEach((btn) => {
+            let a = btn.querySelector('a');
+
+            if (window.innerWidth < 768) {
+                a.addEventListener('click', () => {
+
+                })
+            }
+        })
+    }
+}
+// openMobTextMore();
 
 var allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
