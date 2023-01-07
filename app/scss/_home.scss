@@ -1136,7 +1136,7 @@ main {
     width: 50%;
     height: 100%;
     display: flex;
-    padding: 0.7813vw 7.2917vw 0.7813vw 0.7813vw;
+    padding: .7813vw 7.0917vw .7813vw .7813vw;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
@@ -1147,7 +1147,7 @@ main {
       font-weight: normal;
       font-style: normal;
       color: $dark;
-      margin-bottom: 0.5208vw;
+      margin-bottom: 0.3208vw;
       display: inline-block;
     }
 
@@ -1209,7 +1209,7 @@ main {
 .our-blog {
   background: #fff;
   width: 100%;
-  padding: 3.9063vw 7.8646vw 7.9167vw;
+  padding: 3.9063vw 7.8646vw 7.8667vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1271,7 +1271,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0.8333vw 2.0833vw;
+    padding: .8333vw 2.233vw;
     position: relative;
     z-index: 2;
 
@@ -1309,6 +1309,7 @@ main {
     font-weight: normal;
     color: $dark;
     text-align: center;
+    margin-right: 1vw;
   }
   .single-blog {
     &:nth-child(1) {
@@ -1349,7 +1350,7 @@ main {
 .article-hero__info {
   position: absolute;
   right: 50%;
-  bottom: 2.0833vw;
+  bottom: 1.7833vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1362,6 +1363,7 @@ main {
     font-weight: normal;
     font-style: normal;
     color: $blue;
+    margin-bottom: -0.8vw;
   }
   p:not(.time) {
     font-size: 1.8750vw;
@@ -1369,7 +1371,7 @@ main {
     font-weight: 300;
     font-style: normal;
     color: #fff;
-    margin-bottom: 0.6250vw;
+    margin-bottom: -0.1vw;
   }
   p.time {
     font-weight: 200;
@@ -1377,10 +1379,13 @@ main {
     line-height: 2.7083vw;
     color: #fff;
     position: relative;
+    margin-right: 0.4vw;
+    display: flex;
+    align-items: center;
     &::before {
       margin-left: 0.6250vw;
-      width: 1.1979vw;
-      height: 1.1979vw;
+      width: 1.2979vw;
+      height: 1.2979vw;
       display: inline-block;
       content: '';
       background: url("../img/clock.svg") no-repeat center / 100%;
@@ -1404,7 +1409,7 @@ main {
       font-size: 2.3438vw;
       line-height: 3.4375vw;
       color: $dark;
-      margin-bottom: 1.4063vw;
+      margin-bottom: 1.063vw;
 
     }
     p {
@@ -1412,7 +1417,7 @@ main {
       font-size: 1.8229vw;
       line-height: 3.1250vw;
       color: $dark;
-      margin-bottom: 2.1875vw;
+      margin-bottom: 3.4475vw;
 
     }
     img {
@@ -1438,7 +1443,7 @@ main {
   margin-top: 1.1979vw;
   border-top: 2px solid $dark;
 
-  padding-top: 3.8021vw;
+  padding-top: 3.521vw;
   p {
     font-weight: 300;
     font-size: 1.8229vw;
@@ -1472,6 +1477,49 @@ main {
 }
 
 @media screen and (min-width: 767px) {
+  .article-bottom p {
+    width: 94%;
+  }
+  .single-blog {
+    .text {
+      p {
+        margin-top: -1vw;
+      }
+    }
+  }
+  .our-blog {
+    > span {
+      margin-right: 3vw;
+    }
+  }
+  .single-knowledge {
+    &:nth-child(1) {
+      .text {
+        padding-top: 0.5vw  ;
+      }
+    }
+    &:nth-child(2) {
+      .text {
+        padding: .7813vw 7.817vw .7813vw .7813vw;
+      }
+    }
+    &:nth-child(4) {
+      .text {
+        padding-bottom: 6.87vw;
+        padding-right: 7.8vw;
+      }
+    }
+    &:nth-child(5) {
+      .text {
+        padding-top: 1vw;
+        padding-right: 7.6vw;
+      }
+    }
+  }
+  .her-down {
+    padding-right: 0.5vw;
+
+  }
   .our-rules-text__sec span {
     margin-right: 0.8vw;
   }
@@ -1616,10 +1664,35 @@ main {
 
   }
   .our-blog {
-    padding: 8.3721vw 5.1163vw 4.1860vw 6.0465vw;
+    > span {
+      margin-left: 4.3vw;
+      margin-bottom: 3vw;
+    }
+  }
+  .our-blog {
+    padding: 9.7721vw 5.1163vw 3.686vw 6.0465vw;
   }
   .second-our-blog {
-    padding: 5.8140vw 5.1163vw 10.9302vw 6.0465vw;
+    padding: 6.8714vw 5.1163vw 10.9302vw 6.0465vw;
+    > span {
+      margin-right: 0;
+      margin-left: 3.5vw;
+      letter-spacing: -0.02em;
+      margin-bottom: 6.8vw;
+    }
+    .blog-list {
+      gap: 6.5116vw;
+    }
+    .single-blog {
+      height: 97.6093vw;
+      .text {
+        padding-top: 2vw;
+        p {
+          margin-top: -0.9vw;
+          margin-right: 0.5vw;
+        }
+      }
+    }
   }
   .blog-list {
     gap: 7.2093vw;
@@ -1629,7 +1702,7 @@ main {
     height: 92.3256vw;
     .text {
       height: 20.0000vw;
-      padding: 2px 4.1860vw;
+      padding: 1.6vw 4.186vw;
       span {
         font-size: 9.3023vw;
         line-height: 1.1;
@@ -1639,6 +1712,8 @@ main {
         font-size: 3.4884vw;
         line-height: 1.1;
         font-weight: 300;
+        margin-top: -0.3vw;
+        margin-right: 0.3vw;
       }
     }
   }
@@ -1651,6 +1726,8 @@ main {
     line-height: 11.6279vw;
     bottom: 19.0698vw;
     text-align: center;
+    padding-bottom: 1vw;
+    padding-left: 0.5vw;
 
     &::after {
       top: calc(100% + 3.9535vw);
@@ -1660,7 +1737,7 @@ main {
   }
 
   .our-knowledge {
-    padding: 6.5116vw 5.8140vw 9.3023vw 6.9767vw;
+    padding: 6.5116vw 5.814vw 8.3023vw 6.9767vw;
   }
   .single-knowledge {
     margin-bottom: 9.3023vw;
@@ -1689,7 +1766,7 @@ main {
         justify-content: center;
         height: 17.9070vw;
         background: $dark;
-        margin-bottom: 6.2791vw;
+        margin-bottom: 4.791vw;
         font-size: 6.9767vw;
         line-height: 10.2326vw;
         font-weight: normal;
@@ -1704,11 +1781,14 @@ main {
           font-size: 4.6512vw;
           line-height: 9.3023vw;
           font-weight: 300;
+          br {
+            display: none;
+          }
 
           &::before {
             width: 3.4884vw;
             height: 3.4884vw;
-            left: calc(100% + 3.4884vw);
+            left: calc(100% + 4.1vw);
             top: 3.0884vw;
           }
         }
@@ -1717,6 +1797,27 @@ main {
 
     &:last-child {
       margin-bottom: 0;
+    }
+    &:nth-child(2) {
+      .text {
+        span {
+          margin-bottom: 6.0vw;
+        }
+      }
+    }
+    &:nth-child(4) {
+      .text {
+        span {
+          margin-bottom: 6.1vw;
+        }
+      }
+    }
+    &:nth-child(5) {
+      .text {
+        span {
+          margin-bottom: 4.2vw;
+        }
+      }
     }
   }
 
