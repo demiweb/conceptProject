@@ -120,6 +120,26 @@ function clickNext() {
 
 clickNext();
 
+let footScroll = [...document.querySelectorAll('#menu-item-33 a')];
+
+function clickFoot() {
+    if (footScroll.length) {
+        footScroll.forEach((btn) => {
+
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $('#foot-top').offset().top - $('.header').height()
+                }, 400);
+            })
+        })
+    }
+}
+
+clickFoot();
+
 let herDown = [...document.querySelectorAll('.her-down')];
 
 function clickHer() {
@@ -217,23 +237,27 @@ function clientsStartSlider() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 slidesPerGroup: 1,
                 speed: 600,
                 navigation: {
                     nextEl: sldNext,
                     prevEl: sldPrev,
                 },
+                centeredSlides: true,
                 autoplay: {
                     delay: 3000,
                 },
-                spaceBetween: 6,
+                spaceBetween: 17,
                 breakpoints: {
 
                     767: {
                         slidesPerView: 5,
                         spaceBetween: 40,
-                        autoplay: false,
+                        centeredSlides: false,
+                        autoplay: {
+                            delay: 3000,
+                        },
                     }
                 }
 
@@ -255,11 +279,17 @@ function infosControl() {
     if (infos.length) {
         infos.forEach((inf, k) => {
             let btn = inf.querySelector('.btn-infos');
+            let closio = inf.querySelector('.closio');
             btn.addEventListener('click', () => {
                 infos.forEach((inf2) => {
                     inf2.classList.remove('open');
                 });
                 inf.classList.add('open');
+            });
+            closio.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                inf.classList.remove('open');
             })
         })
     }
